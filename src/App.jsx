@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Lab1EffectTimer from './components/Lab1_EffectTimer.jsx';
 import Lab2TimerControl from './components/Lab2_TimerControl.jsx';
 import Lab3InputFocus from './components/Lab3_InputFocus.jsx';
