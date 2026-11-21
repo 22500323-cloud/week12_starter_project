@@ -1,174 +1,215 @@
+
 * {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
     font-family: system-ui, -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-    background: #f5f7fb;
-    color: #18243a
+    background: #f4f6fb;
+    color: #18243a;
 }
 
 .page {
     max-width: 1020px;
     margin: 0 auto;
-    padding: 40px 20px 28px
+    padding: 50px 24px 35px;
 }
 
 .hero {
-    margin-bottom: 26px
+    margin-bottom: 32px;
 }
 
 .eyebrow {
     font-weight: 800;
     font-size: 12px;
-    letter-spacing: .12em;
-    color: #3d6bc7
+    letter-spacing: .14em;
+    color: #5876c9;
 }
 
 .hero h1 {
-    font-size: clamp(28px, 4vw, 40px);
-    margin: 8px 0
+    font-size: clamp(30px, 4vw, 42px);
+    letter-spacing: -1.5px;
+    margin: 10px 0;
 }
 
 .hero p {
-    color: #56647a
+    color: #64718a;
+    line-height: 1.7;
 }
 
 .tabs {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    margin-bottom: 16px
+    gap: 12px;
+    margin-bottom: 18px;
 }
 
 .tab {
-    border: 1px solid #dfe5f0;
-    border-radius: 12px;
-    padding: 14px 12px;
+    border: 1px solid #e0e5ef;
+    border-radius: 14px;
+    padding: 17px 14px;
     background: white;
     text-align: left;
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    color: #32435e
+    gap: 7px;
+    color: #32435e;
+    transition: .2s;
+}
+
+.tab:hover {
+    border-color: #8da5e8;
+    transform: translateY(-2px);
+}
+
+.tab b {
+    font-size: 14px;
 }
 
 .tab span {
     font-size: 12px;
-    color: #637086
+    color: #718098;
 }
 
 .tab.active {
-    background: #e8efff;
-    border-color: #587ee3;
-    color: #214bb1
+    background: #eaf0ff;
+    border-color: #6d8be0;
+    color: #2850ac;
+    box-shadow: 0 4px 12px #587ee31a;
 }
 
 .lab-panel {
     min-height: 345px;
-    border: 1px solid #dfe5f0;
-    border-radius: 16px;
+    border: 1px solid #e0e5ef;
+    border-radius: 18px;
     background: white;
-    padding: 28px;
-    box-shadow: 0 8px 22px #273c6420
+    padding: 32px;
+    box-shadow: 0 10px 30px #273c640d;
 }
 
 .section-heading {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 22px
+    margin-bottom: 25px;
 }
 
 .section-heading h2 {
-    font-size: 19px;
-    margin: 0
+    font-size: 20px;
+    margin: 0;
 }
 
 .pill {
     background: #eaf0ff;
     color: #2850ac;
     border-radius: 99px;
-    padding: 6px 10px;
+    padding: 7px 12px;
     font-size: 12px;
-    font-weight: 800
+    font-weight: 800;
 }
 
 .count {
     font-variant-numeric: tabular-nums;
-    font-size: 64px;
+    font-size: 68px;
     font-weight: 800;
     letter-spacing: -2px;
-    margin: 18px 0
+    margin: 22px 0;
+    color: #285bc7;
 }
 
 .controls {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin: 20px 0
+    margin: 22px 0;
 }
 
 .controls button {
     border: 0;
-    border-radius: 9px;
-    padding: 11px 19px;
+    border-radius: 10px;
+    padding: 12px 22px;
     background: #285bc7;
     color: white;
     font-size: 14px;
-    font-weight: 650;
-    cursor: pointer
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.controls button:hover:not(:disabled) {
+    background: #1e479f;
+    transform: translateY(-1px);
 }
 
 .controls button.secondary {
-    background: #e8ecf4;
-    color: #26364e
+    background: #edf0f6;
+    color: #34445e;
+}
+
+.controls button.secondary:hover:not(:disabled) {
+    background: #dfe5f0;
 }
 
 .controls button:disabled {
-    opacity: .48;
-    cursor: not-allowed
+    opacity: .45;
+    cursor: not-allowed;
 }
 
 .field {
     display: block;
     max-width: 420px;
     width: 100%;
-    border: 1px solid #aab7ca;
-    border-radius: 8px;
-    padding: 12px 14px;
-    font: inherit
+    border: 1px solid #cbd4e3;
+    border-radius: 10px;
+    padding: 13px 15px;
+    font: inherit;
+    outline: none;
+    transition: .2s;
+}
+
+.field:focus {
+    border-color: #587ee3;
+    box-shadow: 0 0 0 3px #587ee31a;
 }
 
 .hint {
     font-size: 13px;
-    color: #65748b;
-    line-height: 1.7
+    color: #718098;
+    line-height: 1.8;
 }
 
 .status {
+    display: inline-block;
     font-weight: 700;
-    color: #3354a1
+    color: #3354a1;
+    background: #edf2ff;
+    padding: 8px 12px;
+    border-radius: 8px;
 }
 
 footer {
-    margin-top: 20px;
+    margin-top: 24px;
     font-size: 12px;
-    color: #6c7990
+    color: #8490a3;
+    text-align: center;
 }
 
-@media(max-width:650px) {
+@media(max-width: 650px) {
+    .page {
+        padding: 30px 16px;
+    }
+
     .tabs {
-        grid-template-columns: repeat(2, 1fr)
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .lab-panel {
-        padding: 20px
+        padding: 22px;
     }
 
     .count {
-        font-size: 52px
+        font-size: 54px;
     }
 }

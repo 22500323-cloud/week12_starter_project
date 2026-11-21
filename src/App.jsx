@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Lab1EffectTimer from './components/Lab1_EffectTimer.jsx';
 import Lab2TimerControl from './components/Lab2_TimerControl.jsx';
 import Lab3InputFocus from './components/Lab3_InputFocus.jsx';
@@ -20,8 +20,8 @@ export default function App() {
     <main className="page">
       <header className="hero">
         <p className="eyebrow">OPEN SOURCE STUDIO · WEEK 12</p>
-        <h1>React Hooks Playground</h1>
-        <p>useEffect · Cleanup · useRef — 4개의 독립된 Lab</p>
+        <h1>Hook Lab Studio</h1>
+        <p>Explore React Hooks Through Interactive Experiments</p>
       </header>
 
       <nav className="tabs" aria-label="실습 선택">
